@@ -41,8 +41,9 @@ router.post("/crearRevision", async (req, res) => {
 /**
  * Muestra las revisiones realizads para un gerente
  */
-router.post("/listRevisiones", async (req,res)=>{  
+router.post("/listRevisiones", async (req,res)=>{    
   const idUsuario = await req.body;     
+  console.log(idUsuario.idBotiquin);
   const revisiones = await getRevisionesByGerente(idUsuario.idBotiquin);  
   res.render("listaRevisiones",{ revisiones:revisiones });
 });

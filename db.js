@@ -60,7 +60,7 @@ const getRevisionesByGerente = (botiquin) => {
   return collection
     .find({      
       estado: "completado",
-      botiquin:botiquin
+      botiquin: ObjectId(botiquin)
     })
     .toArray();
 };

@@ -80,6 +80,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(
   session({
     secret: process.env.secretSession,
+    //secret: "process.env.secretSession",
     resave: false,
     saveUninitialized: false,
   }),

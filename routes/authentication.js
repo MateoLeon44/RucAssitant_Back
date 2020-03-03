@@ -84,7 +84,7 @@ router.post("/crearEmpleado", isAuthenticateGerente,async (req, res) => {
 router.post(
   "/signup",
   passport.authenticate("local-signup", {
-    successRedirect: "/authentication/signin",
+    successRedirect: "/",
     failureRedirect: "/authentication/signup",
     passReqToCallback: true,
   }),
